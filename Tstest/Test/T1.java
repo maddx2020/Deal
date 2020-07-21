@@ -20,5 +20,9 @@ public class T1 extends Thread {
 	public static void main(String[] args) {
 		T1 myTest = new T1();
 		myTest.start();
+	
+	
+	
+	
 	}
 }
