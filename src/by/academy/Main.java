@@ -5,7 +5,7 @@ public class Main {
 
 		User user1 = new User("Вася");
 		User user2 = new User("Леха");
-		user1.setDateOfBirth("01.12.1900");
+		user1.setDateOfBirth("01.13.1900");
 
 		System.out.println(user1.getDateOfBirth());
 
