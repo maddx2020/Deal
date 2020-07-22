@@ -54,14 +54,14 @@ public class Deal {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Deal [seller=");
+		builder.append("Deal \n[seller=");
 		builder.append(seller);
-		builder.append(", buyer=");
+		builder.append(",\n buyer=");
 		builder.append(buyer);
-		builder.append(", products=");
+		builder.append(",\n products=");
 		builder.append(Arrays.toString(products));
-		builder.append(", status=");
-		builder.append(status);
+		builder.append(",\n status=");
+		builder.append(status.Done);
 		builder.append("]");
 		return builder.toString();
 	}

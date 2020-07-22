@@ -8,7 +8,6 @@ public class User {
 	private String dateOfBirth;
 	private int phone;
 	private String email;
-	private Pattern p = Pattern.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
 
 	public User() {
 		super();
@@ -34,14 +33,16 @@ public class User {
 	}
 
 	public void setDateOfBirth(String dateOfBirth) {
+		Pattern p = Pattern
+				.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
 		Matcher m = p.matcher(dateOfBirth);
-		if(m.find()) {
+		if (m.find()) {
 			this.dateOfBirth = dateOfBirth;
-		}else {
+		} else {
 			System.out.println("Неверная дата рождения");
 			return;
 		}
-	
+
 	}
 
 	@Override
@@ -55,8 +56,6 @@ public class User {
 		builder.append(phone);
 		builder.append(", email=");
 		builder.append(email);
-		builder.append(", p=");
-		builder.append(p);
 		builder.append("]");
 		return builder.toString();
 	}
