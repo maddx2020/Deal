@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 public class User {
 	private String name;
 	private String dateOfBirth;
+	private int phone;
+	private String email;
 	private Pattern p = Pattern.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
 
 	public User() {
@@ -39,6 +41,22 @@ public class User {
 			System.out.println("Неверная дата рождения");
 			return;
 		}
+	}
+
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
