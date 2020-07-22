@@ -1,5 +1,5 @@
 package by.academy;
-
+@ProduserInfo(name = "Zakupka",company = "RIK",prodyctTypes = {"Eda", "Voda"}, partNumber = 179)
 public class Product {
 
 	private String name;
