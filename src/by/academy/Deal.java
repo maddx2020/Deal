@@ -4,7 +4,7 @@ public class Deal {
 	private User seller;
 	private User buyer;
 	private Product[] products;
-
+	private Status status;
 	public Deal() {
 		super();
 	}
@@ -14,7 +14,7 @@ public class Deal {
 		this.seller = seller;
 		this.buyer = buyer;
 		this.products = products;
-
+		this.status = Status.New;
 	}
 
 	public void setSeller(User seller) {

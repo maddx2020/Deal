@@ -8,7 +8,7 @@ public class Main {
 		user1.setDateOfBirth("01.12.1900");
 
 		System.out.println(user1.getDateOfBirth());
-		
+
 		Product prod1 = new Product("хлеб", 1, 1.40);
 		Product prod2 = new Product("молоко", 3, 2.11);
 		Apple prod3 = new Apple("яблоко", 2, 1.50);
@@ -27,9 +27,7 @@ public class Main {
 		System.out.println("Вторая сделка: " + deal1.fullPrice());
 
 		System.out.println("Сумма всех сделок: " + (deal1.fullPrice() + deal.fullPrice()));
-		
-		
-		
+
 	}
 
 }
