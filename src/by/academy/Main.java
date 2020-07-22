@@ -5,7 +5,10 @@ public class Main {
 
 		User user1 = new User("Вася");
 		User user2 = new User("Леха");
+		user1.setDateOfBirth("01.12.1900");
 
+		System.out.println(user1.getDateOfBirth());
+		
 		Product prod1 = new Product("хлеб", 1, 1.40);
 		Product prod2 = new Product("молоко", 3, 2.11);
 		Apple prod3 = new Apple("яблоко", 2, 1.50);
