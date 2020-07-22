@@ -28,6 +28,10 @@ public class Main {
 
 		System.out.println("Сумма всех сделок: " + (deal1.fullPrice() + deal.fullPrice()));
 
+		System.out.println(deal1.toString());
+		
+		System.out.println(deal.getBuyer().getName());
+		
 	}
 
 }

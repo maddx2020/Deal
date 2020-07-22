@@ -41,6 +41,24 @@ public class User {
 			System.out.println("Неверная дата рождения");
 			return;
 		}
+	
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("User [name=");
+		builder.append(name);
+		builder.append(", dateOfBirth=");
+		builder.append(dateOfBirth);
+		builder.append(", phone=");
+		builder.append(phone);
+		builder.append(", email=");
+		builder.append(email);
+		builder.append(", p=");
+		builder.append(p);
+		builder.append("]");
+		return builder.toString();
 	}
 
 	public int getPhone() {

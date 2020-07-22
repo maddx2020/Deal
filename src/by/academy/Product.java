@@ -45,4 +45,18 @@ public class Product {
 		return price * quantity;
 
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Product [name=");
+		builder.append(name);
+		builder.append(", quantity=");
+		builder.append(quantity);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

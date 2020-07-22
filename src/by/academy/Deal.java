@@ -1,5 +1,7 @@
 package by.academy;
 
+import java.util.Arrays;
+
 public class Deal {
 	private User seller;
 	private User buyer;
@@ -49,4 +51,24 @@ public class Deal {
 		return fullprice;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Deal [seller=");
+		builder.append(seller);
+		builder.append(", buyer=");
+		builder.append(buyer);
+		builder.append(", products=");
+		builder.append(Arrays.toString(products));
+		builder.append(", status=");
+		builder.append(status);
+		builder.append("]");
+		return builder.toString();
+	}
+
+//	public void getDeal() {
+//		
+//	}
+	
+	
 }
