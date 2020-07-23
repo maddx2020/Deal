@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class User {
 	private String name;
 	private String dateOfBirth;
-	private int phone;
+	private String phone;
 	private String email;
 
 	public User() {
@@ -32,6 +32,22 @@ public class User {
 		return dateOfBirth;
 	}
 
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public void setDateOfBirth(String dateOfBirth) {
 		Pattern p = Pattern
 				.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
@@ -48,32 +64,12 @@ public class User {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("User [name=");
-		builder.append(name);
-		builder.append(", dateOfBirth=");
-		builder.append(dateOfBirth);
-		builder.append(", phone=");
+		builder.append("\t"+name);
+		builder.append("\t Контактная информация: тел. ");
 		builder.append(phone);
-		builder.append(", email=");
+		builder.append(", email: ");
 		builder.append(email);
-		builder.append("]");
 		return builder.toString();
-	}
-
-	public int getPhone() {
-		return phone;
-	}
-
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 }

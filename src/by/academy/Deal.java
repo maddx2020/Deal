@@ -7,6 +7,7 @@ public class Deal {
 	private User buyer;
 	private Product[] products;
 	private Status status;
+
 	public Deal() {
 		super();
 	}
@@ -51,24 +52,25 @@ public class Deal {
 		return fullprice;
 	}
 
+	@SuppressWarnings("static-access")
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Deal \n[seller=");
+		builder.append("Статус сделки: ");
+		builder.append(status.New.getStr() + "\n");
+		builder.append("Накладная \n\nПродавец: ");
 		builder.append(seller);
-		builder.append(",\n buyer=");
+		builder.append("\nПокупатель: ");
 		builder.append(buyer);
-		builder.append(",\n products=");
-		builder.append(Arrays.toString(products));
-		builder.append(",\n status=");
-		builder.append(status.Done);
-		builder.append("]");
+		builder.append("\n\nСтатус сделки: ");
+		builder.append(status.InProgress.getStr() + "\n");
+		builder.append("Информация по товарам:\n");
+		builder.append(Arrays.toString(products) + "\n");
+		builder.append("\nСтатус сделки: ");
+		builder.append(Status.Done.getStr()+ "\n");
+		builder.append("Итоговая сумма сделки: ");
+		builder.append(fullPrice());
 		return builder.toString();
 	}
 
-//	public void getDeal() {
-//		
-//	}
-	
-	
 }

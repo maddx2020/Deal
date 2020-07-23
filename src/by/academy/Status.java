@@ -1,7 +1,7 @@
 package by.academy;
 
 public enum Status {
-	New("New"), InProgress("In progress"), Done("Done");
+	New("Новая"), InProgress("В процессе"), Done("Готово");
 
 	private String str;
 
@@ -12,5 +12,6 @@ public enum Status {
 	public String getStr() {
 		return str;
 	}
+
 
 }

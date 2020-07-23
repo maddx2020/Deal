@@ -1,5 +1,6 @@
 package by.academy;
-@ProduserInfo(name = "Zakupka",company = "RIK",prodyctTypes = {"Eda", "Voda"}, partNumber = 179)
+
+@ProduserInfo(name = "Zakupka", company = "RIK", prodyctTypes = { "Eda", "Voda" }, partNumber = 179)
 public class Product {
 
 	private String name;
@@ -49,13 +50,12 @@ public class Product {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Product [name=");
+		builder.append("\nНаименование: \t");
 		builder.append(name);
-		builder.append(", quantity=");
+		builder.append("\tколичество: ");
 		builder.append(quantity);
-		builder.append(", price=");
+		builder.append("\t цена за ед.: ");
 		builder.append(price);
-		builder.append("]");
 		return builder.toString();
 	}
 
