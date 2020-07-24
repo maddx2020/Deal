@@ -24,6 +24,15 @@ public class User implements Serializable{
 
 	}
 
+	
+	public User(String name, Date dateOfBirth, String phone, String email) {
+		super();
+		this.name = name;
+		this.dateOfBirth = dateOfBirth;
+		this.phone = phone;
+		this.email = email;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -48,8 +57,6 @@ public class User implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	
 
 	public Date getDateOfBirth() {
 		return dateOfBirth;
