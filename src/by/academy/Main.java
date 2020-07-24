@@ -10,7 +10,7 @@ public class Main {
 		User user1 = new User();
 		User user2 = new User();
 		User[] users = { user1, user2 };
-		Validat phone = new User();
+		Validat phone = new Bel();
 		Validat email = new User();
 
 		for (User u : users) {
