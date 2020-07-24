@@ -1,18 +1,44 @@
 package by.academy;
 
+import java.util.Scanner;
+
 public class Main {
 	public static void main(String[] args) {
+		String line = new String();
+		Scanner scanner = new Scanner(System.in);
 
-		User user1 = new User("Вася");
-		User user2 = new User("Леха");
-//		user1.;
-		user1.setPhone("+375291122333");
-		user1.setEmail("tut@nikogo.net");
-		user2.setPhone("+375295556677");
-		user2.setEmail("mozgov@tut.net");
+		User user1 = new User();
+		User user2 = new User();
+		User[] users = {user1,user2};
+		Validator phone = new User();
+		Validator email = new User();
 
-		System.out.println(user1.getDateOfBirth());
+		for(User u : users) {
+		System.out.print("Введите имя участника сделки: ");
+		u.setName(scanner.nextLine());
+		System.out.print("Введите номер телефона: ");
+		line = scanner.nextLine();
+		while (phone.phoneValidate(line)) {
+			System.out.print("Неверный номер. Введите повторно: ");
+			line = scanner.nextLine();
+		}
+		u.setPhoneNumber(line);
+		System.out.print("Введите email адрес: ");
+		line = scanner.nextLine();
+		while (email.emailValidate(line)) {
+			System.out.print("Неверный адрес. Введите повторно: ");
+			line = scanner.nextLine();
+		}
+		u.setEmail(line);
 		System.out.println();
+		}
+		System.out.println();
+					
+
+		scanner.close();
+
+//		System.out.println(user1.getDateOfBirth());
+//		System.out.println();
 
 		Product prod1 = new Product("Хлеб Черный", 1, 1.40);
 		Product prod2 = new Product("Молоко 3%", 3, 2.11);
@@ -28,8 +54,8 @@ public class Main {
 //		Deal deal1 = new Deal(user1, user2, products1);
 
 		System.out.println(deal.toString());
-
-		System.out.println();
+//
+//		System.out.println();
 
 //		public void setDateOfBirth(String dateOfBirth) {
 //			Pattern p = Pattern
@@ -43,7 +69,6 @@ public class Main {
 //			}
 //
 //		}
-
 	}
 
 }

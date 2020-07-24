@@ -103,7 +103,7 @@ public class Deal implements Serializable {
 		builder.append(Arrays.toString(products) + "\n");
 		builder.append("\nСтатус сделки: ");
 		builder.append(Status.Done.getStr() + "\n");
-		builder.append("Итоговая сумма сделки к оплате: ");
+		builder.append("Итоговая сумма к оплате: ");
 		builder.append(fullPrice());
 		return builder.toString();
 	}
