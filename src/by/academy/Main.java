@@ -56,21 +56,7 @@ public class Main {
 //		Deal deal1 = new Deal(user1, user2, products1);
 
 		System.out.println(deal.toString());
-//
-//		System.out.println();
 
-//		public void setDateOfBirth(String dateOfBirth) {
-//			Pattern p = Pattern
-//					.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
-//			Matcher m = p.matcher(dateOfBirth);
-//			if (m.find()) {
-//				this.dateOfBirth = dateOfBirth;
-//			} else {
-//				System.out.println("Неверная дата рождения");
-//				return;
-//			}
-//
-//		}
 	}
 
 }
