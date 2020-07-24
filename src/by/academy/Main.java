@@ -1,8 +1,5 @@
 package by.academy;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 public class Main {
 	public static void main(String[] args) {
 
@@ -30,19 +27,7 @@ public class Main {
 		System.out.println(deal.toString());
 
 		System.out.println();
-		
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		Calendar s = Calendar.getInstance();
-		s.add(Calendar.DAY_OF_MONTH,10);
-		System.out.println(sdf.format(s.getTime()));
-		
-		
-		//		Date date = new Date();
-//		System.out.println(date);
-//		System.out.print(a.getTime() + " + 10 дней ");
-//		a.add(Calendar.DAY_OF_MONTH, 10);
-//		System.out.println(a.getTime());
 	}
 
 }
