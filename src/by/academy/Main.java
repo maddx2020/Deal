@@ -42,11 +42,11 @@ public class Main {
 		}
 		scanner.close();
 
-		Product prod1 = new Product("Хлеб Черный", 1, 1.40);
-		Product prod2 = new Product("Молоко 3%", 3, 2.11);
-		Apple prod3 = new Apple("Яблоко Golden", 2, 1.50);
-		Vino prod4 = new Vino("Портвейн 777", 5, 8);
-		Chees prod5 = new Chees("сырок Дружба", 5, 3);
+		Product prod1 = new Product("Хлеб", 1, 1.40);
+		Product prod2 = new Product("Молоко", 3, 2.11);
+		Apple prod3 = new Apple("Яблоко", 2, 1.50);
+		Vino prod4 = new Vino("Портвейн", 5, 8);
+		Chees prod5 = new Chees("Сыр", 5, 3);
 
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 
