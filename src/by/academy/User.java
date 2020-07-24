@@ -19,29 +19,7 @@ public class User implements Serializable, Validator {
 
 	public User() {
 		super();
-//		PhoneValidator phone = new User();
-
 	}
-
-	public User(String name) {
-		super();
-		this.name = name;
-
-	}
-
-	public User(String name, String phoneNumber) {
-		super();
-		this.name = name;
-		this.phoneNumber = phoneNumber;
-
-	}
-
-//	public User(String name, String phoneNumber, String email) {
-//		super();
-//		this.name = name;
-//		this.phoneNumber = phoneNumber;
-//		this.email = email;
-//	}
 
 	public User(String name, Date dateOfBirth, String phoneNumber, String email) {
 		super();
