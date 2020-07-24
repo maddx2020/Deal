@@ -5,11 +5,14 @@ public class Main {
 
 		User user1 = new User("Вася");
 		User user2 = new User("Леха");
-		user1.setDateOfBirth("01.12.1900");
+//		user1.;
 		user1.setPhone("+375291122333");
 		user1.setEmail("tut@nikogo.net");
 		user2.setPhone("+375295556677");
 		user2.setEmail("mozgov@tut.net");
+
+		System.out.println(user1.getDateOfBirth());
+		System.out.println();
 
 		Product prod1 = new Product("Хлеб Черный", 1, 1.40);
 		Product prod2 = new Product("Молоко 3%", 3, 2.11);
@@ -27,6 +30,19 @@ public class Main {
 		System.out.println(deal.toString());
 
 		System.out.println();
+
+//		public void setDateOfBirth(String dateOfBirth) {
+//			Pattern p = Pattern
+//					.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
+//			Matcher m = p.matcher(dateOfBirth);
+//			if (m.find()) {
+//				this.dateOfBirth = dateOfBirth;
+//			} else {
+//				System.out.println("Неверная дата рождения");
+//				return;
+//			}
+//
+//		}
 
 	}
 

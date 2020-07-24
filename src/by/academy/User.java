@@ -1,11 +1,15 @@
 package by.academy;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Date;
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
-	private String dateOfBirth;
+	private Date dateOfBirth;
 	private String phone;
 	private String email;
 
@@ -28,9 +32,6 @@ public class User {
 		return name;
 	}
 
-	public String getDateOfBirth() {
-		return dateOfBirth;
-	}
 
 	public String getPhone() {
 		return phone;
@@ -48,17 +49,14 @@ public class User {
 		this.email = email;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
-		Pattern p = Pattern
-				.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])([\\.]|[/]|[-])([0]?[1-9]|1[0-2])([\\.]|[/]|[-])\\d{4}");
-		Matcher m = p.matcher(dateOfBirth);
-		if (m.find()) {
-			this.dateOfBirth = dateOfBirth;
-		} else {
-			System.out.println("Неверная дата рождения");
-			return;
-		}
+	
 
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	@Override

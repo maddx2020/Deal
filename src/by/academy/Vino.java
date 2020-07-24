@@ -22,7 +22,7 @@ public class Vino extends Product {
 		return discount;
 
 	}
- 
+
 	@Override
 	public double fullSum() {
 		discount();

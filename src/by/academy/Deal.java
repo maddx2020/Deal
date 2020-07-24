@@ -1,12 +1,17 @@
 package by.academy;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;;
 
-public class Deal {
+public class Deal implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private User seller;
 	private User buyer;
 	private Product[] products;
