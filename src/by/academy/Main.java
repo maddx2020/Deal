@@ -12,6 +12,7 @@ public class Main {
 		User[] users = { user1, user2 };
 		Validator phone = new User();
 		Validator email = new User();
+		Validator birth = new User();
 
 		for (User u : users) {
 			System.out.print("Введите имя участника сделки: ");
@@ -30,9 +31,15 @@ public class Main {
 				line = scanner.nextLine();
 			}
 			u.setEmail(line);
+			System.out.print("Введите дату рождения: ");
+			line = scanner.nextLine();
+			while (birth.dateOfBirthday(line)) {
+				System.out.print("Неверная дата. Введите повторно: ");
+				line = scanner.nextLine();
+			}
+			u.setDateOfBirth(line);
 			System.out.println();
 		}
-
 		scanner.close();
 
 		Product prod1 = new Product("Хлеб Черный", 1, 1.40);

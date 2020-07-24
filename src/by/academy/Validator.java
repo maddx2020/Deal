@@ -6,4 +6,6 @@ public interface Validator {
 
 	public boolean emailValidate(String email);
 
+	public boolean dateOfBirthday(String dateOfBirth);
+
 }
