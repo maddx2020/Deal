@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class User implements Serializable, Validator {
+public class User implements Serializable, Validat {
 	/**
 	 * 
 	 */

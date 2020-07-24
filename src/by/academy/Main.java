@@ -10,8 +10,8 @@ public class Main {
 		User user1 = new User();
 		User user2 = new User();
 		User[] users = { user1, user2 };
-		Validator phone = new User();
-		Validator email = new User();
+		Validat phone = new User();
+		Validat email = new User();
 
 		for (User u : users) {
 			System.out.print("Введите имя участника сделки: ");

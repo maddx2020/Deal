@@ -1,6 +1,6 @@
 package by.academy;
 
-public interface Validator {
+public interface Validat {
 
 	public boolean phoneValidate(String phoneNumber);
 
