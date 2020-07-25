@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;;
+import java.util.GregorianCalendar;
+import java.util.Scanner;;
 
 public class Deal implements Serializable {
 	/**
@@ -18,6 +19,7 @@ public class Deal implements Serializable {
 	private Date deadline;
 	final Date date = new Date();
 	final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+	Scanner sc = new Scanner(System.in);
 
 	public Deal() {
 		super();
@@ -31,6 +33,7 @@ public class Deal implements Serializable {
 		this.products = products;
 		this.setStatus(Status.New);
 		deadline();
+
 	}
 
 	public void setSeller(User seller) {
@@ -83,6 +86,47 @@ public class Deal implements Serializable {
 		return fullprice;
 	}
 
+	public void zapros() {
+		System.out.println("Желаете: 1.Добавить покупки 2.Удалить покупки 3.Получить чек");
+		switch (sc.nextInt()) {
+		case 1: {
+			addProduct();
+			System.out.println();
+			for (int i = 0; i < products.length; i++) {
+				System.out.println(i + 1 + ". " + products[i]);
+			}
+			System.out.println();
+		}
+			zapros();
+			break;
+		case 2: {
+			System.out.println("otnimaem");
+		}
+			zapros();
+			break;
+		default:
+			System.out.println("\n\n" + toString());
+			break;
+		}
+	}
+
+	public void addProduct() {
+		Product[] products1 = new Product[products.length + 1];
+		Product prod = new Product();
+		System.out.print("Введите название продукта: ");
+		String s = sc.next();
+		prod.setName(s);
+		System.out.print("Введите количество: ");
+		prod.setQuantity(sc.nextInt());
+		System.out.print("Введите цену продукта: ");
+		prod.setPrice(sc.nextDouble());
+		for (int i = 0; i < products.length; i++) {
+			products1[i] = products[i];
+		}
+		products1[products.length] = prod;
+		this.products = products1;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -101,6 +145,7 @@ public class Deal implements Serializable {
 		builder.append("Информация по товарам:\n");
 		for (Product p : products) {
 			builder.append(p);
+			builder.append("\n");
 		}
 		builder.append("\n\nСтатус сделки: ");
 		builder.append(Status.Done.getStr() + "\n");

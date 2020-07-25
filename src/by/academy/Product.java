@@ -56,7 +56,7 @@ public class Product implements Serializable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("\nНаименование: \t");
+		builder.append("Наименование: \t");
 		builder.append(name + "\t\t");
 		builder.append("количество:	");
 		builder.append(quantity + "\t");

@@ -16,7 +16,7 @@ public class Main {
 
 		user1 = new User("Вова", "01-02-1900", "+375172233444", "tut@nikogo.net");
 		user2 = new User("Васька", "29.02.2001", "+375334455666", "mozgov@tut.net");
-		
+
 //		for (User u : users) {
 //			System.out.print("Введите имя участника сделки: ");
 //			u.setName(scanner.nextLine());
@@ -43,7 +43,6 @@ public class Main {
 //			u.setDateOfBirth(line);
 //			System.out.println();
 //		}
-//		scanner.close();
 
 		Product prod1 = new Product("Хлеб", 1, 1.40);
 		Product prod2 = new Product("Молоко", 3, 2.11);
@@ -57,8 +56,15 @@ public class Main {
 //		Product[] products1 = { prod4, prod5 };
 //		Deal deal1 = new Deal(user1, user2, products1);
 
-		System.out.println(deal.toString());
+//		System.out.println(deal.toString());
 
+		System.out.println("Корзина покупок: \n");
+		for (int i = 0; i < products.length; i++) {
+			System.out.println(i + 1 + ". " + products[i]);
+		}
+		System.out.println();
+		deal.zapros();
+		scanner.close();
 	}
 
 }
