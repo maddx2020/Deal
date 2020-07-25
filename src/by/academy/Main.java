@@ -53,11 +53,6 @@ public class Main {
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 		Deal deal = new Deal(user1, user2, products);
 
-//		Product[] products1 = { prod4, prod5 };
-//		Deal deal1 = new Deal(user1, user2, products1);
-
-//		System.out.println(deal.toString());
-
 		System.out.println("Корзина покупок: \n");
 		for (int i = 0; i < products.length; i++) {
 			System.out.println(i + 1 + ". " + products[i]);

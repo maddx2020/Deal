@@ -100,7 +100,12 @@ public class Deal implements Serializable {
 			zapros();
 			break;
 		case 2: {
-			System.out.println("otnimaem");
+			delProduct();
+			System.out.println();
+			for (int i = 0; i < products.length; i++) {
+				System.out.println(i + 1 + ". " + products[i]);
+			}
+			System.out.println();
 		}
 			zapros();
 			break;
@@ -114,8 +119,8 @@ public class Deal implements Serializable {
 		Product[] products1 = new Product[products.length + 1];
 		Product prod = new Product();
 		System.out.print("Введите название продукта: ");
-		String s = sc.next();
-		prod.setName(s);
+//		String s = sc.next();
+		prod.setName(sc.next());
 		System.out.print("Введите количество: ");
 		prod.setQuantity(sc.nextInt());
 		System.out.print("Введите цену продукта: ");
@@ -124,6 +129,23 @@ public class Deal implements Serializable {
 			products1[i] = products[i];
 		}
 		products1[products.length] = prod;
+		this.products = products1;
+	}
+
+	public void delProduct() {
+		int i = -1;
+		Product[] products1 = new Product[products.length - 1];
+		System.out.print("Выберете номер продукта который желаете удалить:");
+		int n = sc.nextInt();
+		for (int j = 0; j < products1.length; j++) {
+			i++;
+			if (i != n - 1) {
+				products1[j] = products[i];
+			} else {
+				i++;
+				products1[j] = products[i];
+			}
+		}
 		this.products = products1;
 	}
 
