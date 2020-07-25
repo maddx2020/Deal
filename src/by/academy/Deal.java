@@ -95,17 +95,21 @@ public class Deal implements Serializable {
 			for (int i = 0; i < products.length; i++) {
 				System.out.println(i + 1 + ". " + products[i]);
 			}
-			System.out.println();
+			System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 		}
 			zapros();
 			break;
 		case 2: {
 			delProduct();
-			System.out.println();
-			for (int i = 0; i < products.length; i++) {
-				System.out.println(i + 1 + ". " + products[i]);
+			if (products.length != 0) {
+				System.out.println();
+				for (int i = 0; i < products.length; i++) {
+					System.out.println(i + 1 + ". " + products[i]);
+				}
+				System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+			} else {
+				System.out.println("\nУ вас пустая корзина!\n");
 			}
-			System.out.println();
 		}
 			zapros();
 			break;

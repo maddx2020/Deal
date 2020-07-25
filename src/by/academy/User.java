@@ -85,10 +85,10 @@ public class User implements Serializable, Validator {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("\t" + name);
+		builder.append("\t" + name + "\t");
 		builder.append("\t Контактная информация: тел. ");
-		builder.append(phoneNumber);
-		builder.append(", email: ");
+		builder.append(phoneNumber + ", \t");
+		builder.append("email: ");
 		builder.append(email);
 		return builder.toString();
 	}
