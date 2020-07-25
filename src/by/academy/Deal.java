@@ -2,7 +2,6 @@ package by.academy;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;;
@@ -100,8 +99,10 @@ public class Deal implements Serializable {
 		builder.append("\n\nСтатус сделки: ");
 		builder.append(Status.InProgress.getStr() + "\n");
 		builder.append("Информация по товарам:\n");
-		builder.append(Arrays.toString(products) + "\n");
-		builder.append("\nСтатус сделки: ");
+		for (Product p : products) {
+			builder.append(p);
+		}
+		builder.append("\n\nСтатус сделки: ");
 		builder.append(Status.Done.getStr() + "\n");
 		builder.append("Итоговая сумма к оплате: ");
 		builder.append(fullPrice());

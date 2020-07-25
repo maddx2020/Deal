@@ -3,7 +3,7 @@ package by.academy;
 import java.io.Serializable;
 
 @ProduserInfo(name = "Zakupka", company = "RIK", prodyctTypes = { "Eda", "Voda" }, partNumber = 179)
-public class Product implements Serializable{
+public class Product implements Serializable {
 
 	/**
 	 * 
@@ -57,10 +57,10 @@ public class Product implements Serializable{
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("\nНаименование: \t");
-		builder.append(name);
-		builder.append("\tколичество: ");
-		builder.append(quantity);
-		builder.append("\t цена за ед.: ");
+		builder.append(name + "\t\t");
+		builder.append("количество:	");
+		builder.append(quantity + "\t");
+		builder.append("цена за ед.:	");
 		builder.append(price);
 		return builder.toString();
 	}

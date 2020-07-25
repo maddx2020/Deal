@@ -2,6 +2,10 @@ package by.academy;
 
 public class Vino extends Product {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	int discount;
 
 	public Vino(String name, int quantity, double price) {

@@ -2,7 +2,11 @@ package by.academy;
 
 public class Apple extends Product {
 
-	int discount;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int discount;
 
 	public Apple(String name, int quantity, double price) {
 		super(name, quantity, price);

@@ -2,6 +2,10 @@ package by.academy;
 
 public class Chees extends Product {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	int discount;
 
 	public Chees(String name, int quantity, double price) {
