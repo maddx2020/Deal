@@ -12,6 +12,14 @@ public class Apple extends Product {
 		super(name, quantity, price);
 	}
 
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
 	public int discount() {
 
 		if (quantity < 5) {

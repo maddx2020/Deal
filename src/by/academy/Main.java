@@ -48,9 +48,9 @@ public class Main {
 
 		Product prod1 = new Product("Хлеб", 1, 1.40);
 		Product prod2 = new Product("Молоко", 3, 2.11);
-		Product prod3 = new Apple("Яблоко", 2, 1.50);
-		Product prod4 = new Vino("Вино", 5, 8);
-		Product prod5 = new Chees("Сыр", 5, 3);
+		Apple prod3 = new Apple("Яблоко", 2, 1.50);
+		Vino prod4 = new Vino("Вино", 5, 8);
+		Chees prod5 = new Chees("Сыр", 5, 3);
 
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 		Deal deal = new Deal(user1, user2, products);
@@ -60,9 +60,9 @@ public class Main {
 			System.out.println(i + 1 + ". " + products[i]);
 		}
 		System.out.println("\nЦена за покупки: " + deal.fullPrice() + "\n");
-		
+
 		deal.zapros();
-		
+
 		scanner.close();
 	}
 
