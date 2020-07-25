@@ -60,7 +60,9 @@ public class Main {
 			System.out.println(i + 1 + ". " + products[i]);
 		}
 		System.out.println("\nЦена за покупки: " + deal.fullPrice() + "\n");
+		
 		deal.zapros();
+		
 		scanner.close();
 	}
 
