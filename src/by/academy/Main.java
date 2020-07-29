@@ -1,5 +1,6 @@
 package by.academy;
 
+//import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -51,10 +52,18 @@ public class Main {
 		Apple prod3 = new Apple("Яблоко", 2, 1.50);
 		Vino prod4 = new Vino("Вино", 5, 8);
 		Chees prod5 = new Chees("Сыр", 5, 3);
-
+// Из занятия про коллекции
+//		ArrayList<Product> prodList = new ArrayList<Product>();
+//		prodList.add(prod1);
+//		prodList.add(prod2);
+//		prodList.add(prod3);
+//		prodList.add(prod4);
+//		prodList.add(prod5);
+		
+		
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 		Deal deal = new Deal(user1, user2, products);
-
+//		Deal deal = new Deal(user1, user2, prodList);
 		
 
 		deal.productInfo();

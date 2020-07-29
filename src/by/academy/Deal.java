@@ -2,6 +2,7 @@ package by.academy;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+//import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -15,8 +16,10 @@ public class Deal implements Serializable {
 	private User seller;
 	private User buyer;
 	private Product[] products;
+//	private ArrayList<Product> prodList;
 	private Status status;
 	private Date deadline;
+//	private int i;
 	final Date date = new Date();
 	final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 	Scanner sc = new Scanner(System.in);
@@ -26,11 +29,12 @@ public class Deal implements Serializable {
 		deadline();
 	}
 
-	public Deal(User seller, User buyer, Product[] products) {
+	public Deal(User seller, User buyer, Product[] products/*ArrayList<Product> prodList*/) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
 		this.products = products;
+//		this.prodList=prodList;
 		this.setStatus(Status.New);
 		deadline();
 
@@ -60,6 +64,14 @@ public class Deal implements Serializable {
 		return products;
 	}
 
+//	public ArrayList<Product> getProdList() {
+//		return prodList;
+//	}
+//
+//	public void setProdList(ArrayList<Product> prodList) {
+//		this.prodList = prodList;
+//	}
+
 	public Status getStatus() {
 		return status;
 	}
@@ -81,6 +93,7 @@ public class Deal implements Serializable {
 	public double fullPrice() {
 		double fullprice = 0;
 		for (Product p : products) {
+//		for (Product p : prodList) {
 			fullprice += p.fullSum();
 		}
 		return fullprice;
@@ -98,6 +111,7 @@ public class Deal implements Serializable {
 		case 2: {
 			delProduct();
 			if (products.length != 0) {
+//			if (prodList.size() != 0) {
 				productInfo();
 			} else {
 				System.out.println("\nУ вас пустая корзина!\n");
@@ -153,6 +167,12 @@ public class Deal implements Serializable {
 		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 	}
 
+//		for (Product p: prodList) {
+//			System.out.println(++i + ". " + p);
+//		}
+//		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+//	}
+		
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
