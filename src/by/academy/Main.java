@@ -55,12 +55,9 @@ public class Main {
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 		Deal deal = new Deal(user1, user2, products);
 
-		System.out.println("Корзина покупок: \n");
-		for (int i = 0; i < products.length; i++) {
-			System.out.println(i + 1 + ". " + products[i]);
-		}
-		System.out.println("\nЦена за покупки: " + deal.fullPrice() + "\n");
+		
 
+		deal.productInfo();
 		deal.zapros();
 
 		scanner.close();

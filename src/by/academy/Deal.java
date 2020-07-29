@@ -91,22 +91,14 @@ public class Deal implements Serializable {
 		switch (sc.nextInt()) {
 		case 1: {
 			addProduct();
-			System.out.println();
-			for (int i = 0; i < products.length; i++) {
-				System.out.println(i + 1 + ". " + products[i]);
-			}
-			System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+			productInfo();
 		}
 			zapros();
 			break;
 		case 2: {
 			delProduct();
 			if (products.length != 0) {
-				System.out.println();
-				for (int i = 0; i < products.length; i++) {
-					System.out.println(i + 1 + ". " + products[i]);
-				}
-				System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+				productInfo();
 			} else {
 				System.out.println("\nУ вас пустая корзина!\n");
 			}
@@ -151,6 +143,14 @@ public class Deal implements Serializable {
 			}
 		}
 		this.products = products1;
+	}
+
+	public void productInfo() {
+		System.out.println("\nКорзина покупок: \n");
+		for (int i = 0; i < products.length; i++) {
+			System.out.println(i + 1 + ". " + products[i]);
+		}
+		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 	}
 
 	@Override
