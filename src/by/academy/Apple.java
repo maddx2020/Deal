@@ -2,9 +2,6 @@ package by.academy;
 
 public class Apple extends Product {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private int discount;
 
@@ -32,7 +29,6 @@ public class Apple extends Product {
 			}
 		}
 		return discount;
-
 	}
 
 	@Override

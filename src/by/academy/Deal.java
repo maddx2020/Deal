@@ -9,9 +9,7 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;;
 
 public class Deal implements Serializable {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private User seller;
 	private User buyer;
@@ -29,7 +27,7 @@ public class Deal implements Serializable {
 		deadline();
 	}
 
-	public Deal(User seller, User buyer, Product[] products/*ArrayList<Product> prodList*/) {
+	public Deal(User seller, User buyer, Product[] products/* ArrayList<Product> prodList */) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
@@ -172,7 +170,7 @@ public class Deal implements Serializable {
 //		}
 //		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 //	}
-		
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

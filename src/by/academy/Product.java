@@ -5,9 +5,6 @@ import java.io.Serializable;
 @ProduserInfo(name = "Zakupka", company = "RIK", prodyctTypes = { "Eda", "Voda" }, partNumber = 179)
 public class Product implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private String name;
 	protected int quantity;

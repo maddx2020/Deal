@@ -59,12 +59,10 @@ public class Main {
 //		prodList.add(prod3);
 //		prodList.add(prod4);
 //		prodList.add(prod5);
-		
-		
+
 		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
 		Deal deal = new Deal(user1, user2, products);
 //		Deal deal = new Deal(user1, user2, prodList);
-		
 
 		deal.productInfo();
 		deal.zapros();
