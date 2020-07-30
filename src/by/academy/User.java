@@ -5,9 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class User implements Serializable, Validator {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String dateOfBirth;
