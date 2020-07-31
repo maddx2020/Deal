@@ -140,6 +140,9 @@ public class Deal implements Serializable {
 		this.products = products1;
 	}
 
+	
+	
+	
 	public void delProduct() {
 		int i = -1;
 		Product[] products1 = new Product[products.length - 1];
@@ -157,6 +160,10 @@ public class Deal implements Serializable {
 		this.products = products1;
 	}
 
+	
+	
+	
+	
 	public void productInfo() {
 		System.out.println("\nКорзина покупок: \n");
 //		for (int i = 0; i < products.length; i++) {
