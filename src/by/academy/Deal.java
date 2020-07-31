@@ -171,8 +171,6 @@ public class Deal implements Serializable {
 		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
