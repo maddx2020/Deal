@@ -28,12 +28,12 @@ public class Deal implements Serializable {
 		deadline();
 	}
 
-	public Deal(User seller, User buyer, /*Product[] products*/ ArrayList<Product> prodList) {
+	public Deal(User seller, User buyer, /* Product[] products */ ArrayList<Product> prodList) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
 //		this.products = products;
-		this.prodList=prodList;
+		this.prodList = prodList;
 		this.setStatus(Status.New);
 		deadline();
 
@@ -128,7 +128,6 @@ public class Deal implements Serializable {
 		Product[] products1 = new Product[products.length + 1];
 		Product prod = new Product();
 		System.out.print("Введите название продукта: ");
-//		String s = sc.next();
 		prod.setName(sc.next());
 		System.out.print("Введите количество: ");
 		prod.setQuantity(sc.nextInt());
@@ -166,7 +165,7 @@ public class Deal implements Serializable {
 //		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
 //	}
 
-		for (Product p: prodList) {
+		for (Product p : prodList) {
 			System.out.println(++i + ". " + p);
 		}
 		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
@@ -188,7 +187,7 @@ public class Deal implements Serializable {
 		builder.append("\n\nСтатус сделки: ");
 		builder.append(Status.InProgress.getStr() + "\n");
 		builder.append("Информация по товарам:\n");
-		for (Product p : products) {
+		for (Product p : prodList) {
 			builder.append(p);
 			builder.append("\n");
 		}
