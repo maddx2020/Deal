@@ -172,6 +172,7 @@ public class Deal implements Serializable {
 	}
 
 	
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
