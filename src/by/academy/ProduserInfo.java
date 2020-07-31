@@ -15,4 +15,5 @@ public @interface ProduserInfo {
 	String[] prodyctTypes();
 
 	int partNumber();
+
 }

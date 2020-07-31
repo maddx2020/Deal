@@ -18,7 +18,7 @@ public class User implements Serializable, Validator {
 
 	public User() {
 		super();
-		
+
 	}
 
 	public User(String name, String dateOfBirth, String phoneNumber, String email) {
