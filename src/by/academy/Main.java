@@ -1,6 +1,6 @@
 package by.academy;
 
-//import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +10,6 @@ public class Main {
 
 		User user1 = new User();
 		User user2 = new User();
-		User[] users = { user1, user2 };
 		Validator phone = new User();
 		Validator email = new User();
 		Validator birth = new User();
@@ -20,6 +19,7 @@ public class Main {
 //		user1 = new User("Вова", "01-02-1900", "+375172233444", "tut@nikogo.net");
 //		user2 = new User("Васька", "29.02.2001", "+375334455666", "mozgov@tut.net");
 
+		User[] users = { user1, user2 };
 		for (User u : users) {
 			System.out.print("Введите имя участника сделки: ");
 			u.setName(scanner.nextLine());
@@ -53,19 +53,19 @@ public class Main {
 		Vino prod4 = new Vino("Вино", 5, 8);
 		Chees prod5 = new Chees("Сыр", 5, 3);
 // Из занятия про коллекции
-//		ArrayList<Product> prodList = new ArrayList<Product>();
-//		prodList.add(prod1);
-//		prodList.add(prod2);
-//		prodList.add(prod3);
-//		prodList.add(prod4);
-//		prodList.add(prod5);
+		ArrayList<Product> prodList = new ArrayList<Product>();
+		prodList.add(prod1);
+		prodList.add(prod2);
+		prodList.add(prod3);
+		prodList.add(prod4);
+		prodList.add(prod5);
 
-		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
-		Deal deal = new Deal(user1, user2, products);
-//		Deal deal = new Deal(user1, user2, prodList);
+//		Product[] products = { prod1, prod2, prod3, prod4, prod5 };
+//		Deal deal = new Deal(user1, user2, products);
+		Deal deal = new Deal(user1, user2, prodList);
 
 		deal.productInfo();
-		deal.zapros();
+//		deal.zapros();
 
 		scanner.close();
 	}
