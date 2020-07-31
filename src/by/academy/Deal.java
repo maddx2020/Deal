@@ -136,6 +136,7 @@ public class Deal implements Serializable {
 	
 	
 	
+	
 	public void delProduct() {
 		int i = -1;
 		Product[] products1 = new Product[products.length - 1];
