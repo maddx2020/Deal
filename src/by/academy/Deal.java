@@ -14,7 +14,6 @@ public class Deal implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private User seller;
 	private User buyer;
-//	private Product[] products;
 	private ArrayList<Product> prodList;
 	private Status status;
 	private Date deadline;
@@ -32,7 +31,6 @@ public class Deal implements Serializable {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
-//		this.products = products;
 		this.prodList = prodList;
 		this.setStatus(Status.New);
 		deadline();
@@ -54,14 +52,6 @@ public class Deal implements Serializable {
 	public User getBuyer() {
 		return buyer;
 	}
-
-//	public void setProducts(Product[] products) {
-//		this.products = products;
-//	}
-//
-//	public Product[] getProducts() {
-//		return products;
-//	}
 
 	public ArrayList<Product> getProdList() {
 		return prodList;
@@ -91,7 +81,6 @@ public class Deal implements Serializable {
 
 	public double fullPrice() {
 		double fullprice = 0;
-//		for (Product p : products) {
 		for (Product p : prodList) {
 			fullprice += p.fullSum();
 		}
@@ -109,7 +98,6 @@ public class Deal implements Serializable {
 			break;
 		case 2: {
 			delProduct();
-//			if (products.length != 0) {
 			if (prodList.size() != 0) {
 				productInfo();
 			} else {
@@ -124,6 +112,10 @@ public class Deal implements Serializable {
 		}
 	}
 
+	
+	
+	
+	
 	public void addProduct() {
 		Product[] products1 = new Product[products.length + 1];
 		Product prod = new Product();
