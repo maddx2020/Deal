@@ -17,6 +17,7 @@ public class Apple extends Product {
 		this.discount = discount;
 	}
 
+	
 	public int discount() {
 
 		if (quantity < 5) {

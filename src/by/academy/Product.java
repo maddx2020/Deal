@@ -14,6 +14,7 @@ public class Product implements Serializable {
 		super();
 	}
 
+	
 	public Product(String name, int quantity, double price) {
 		super();
 		this.name = name;
