@@ -2,12 +2,7 @@ package by.academy;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-//import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;;
+import java.util.*;
 
 public class Deal implements Serializable {
 
@@ -17,7 +12,6 @@ public class Deal implements Serializable {
 	private ArrayList<Product> prodList;
 	private Status status;
 	private Date deadline;
-	private int i;
 	final Date date = new Date();
 	final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 	Scanner sc = new Scanner(System.in);
@@ -27,14 +21,13 @@ public class Deal implements Serializable {
 		deadline();
 	}
 
-	public Deal(User seller, User buyer, /* Product[] products */ ArrayList<Product> prodList) {
+	public Deal(User seller, User buyer, ArrayList<Product> prodList) {
 		super();
 		this.seller = seller;
 		this.buyer = buyer;
 		this.prodList = prodList;
 		this.setStatus(Status.New);
 		deadline();
-
 	}
 
 	public void setSeller(User seller) {
@@ -97,8 +90,8 @@ public class Deal implements Serializable {
 			zapros();
 			break;
 		case 2: {
-			delProduct();
 			if (prodList.size() != 0) {
+				delProduct();
 				productInfo();
 			} else {
 				System.out.println("\nУ вас пустая корзина!\n");
@@ -106,18 +99,14 @@ public class Deal implements Serializable {
 		}
 			zapros();
 			break;
-		default:
+		default: {
 			System.out.println("\n\n" + toString());
 			break;
 		}
+		}
 	}
 
-	
-	
-	
-	
 	public void addProduct() {
-		Product[] products1 = new Product[products.length + 1];
 		Product prod = new Product();
 		System.out.print("Введите название продукта: ");
 		prod.setName(sc.next());
@@ -125,51 +114,26 @@ public class Deal implements Serializable {
 		prod.setQuantity(sc.nextInt());
 		System.out.print("Введите цену продукта: ");
 		prod.setPrice(sc.nextDouble());
-		for (int i = 0; i < products.length; i++) {
-			products1[i] = products[i];
-		}
-		products1[products.length] = prod;
-		this.products = products1;
+		prodList.add(prod);
 	}
 
-	
-	
-	
-	
-	
 	public void delProduct() {
-		int i = -1;
-		Product[] products1 = new Product[products.length - 1];
 		System.out.print("Выберете номер продукта который желаете удалить:");
-		int n = sc.nextInt();
-		for (int j = 0; j < products1.length; j++) {
-			i++;
-			if (i != n - 1) {
-				products1[j] = products[i];
-			} else {
-				i++;
-				products1[j] = products[i];
-			}
-		}
-		this.products = products1;
+		prodList.remove(sc.nextInt() - 1);
 	}
 
-	
-	
-	
-	
 	public void productInfo() {
 		System.out.println("\nКорзина покупок: \n");
-//		for (int i = 0; i < products.length; i++) {
-//			System.out.println(i + 1 + ". " + products[i]);
-//		}
-//		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
-//	}
-
-		for (Product p : prodList) {
-			System.out.println(++i + ". " + p);
+		for (int i = 0; i < prodList.size(); i++) {
+			System.out.println(i + 1 + ". " + prodList.get(i));
 		}
+
 		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+	}
+	
+	public void deal() {
+		productInfo();
+		zapros();
 	}
 
 	@Override

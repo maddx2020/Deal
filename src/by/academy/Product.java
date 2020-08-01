@@ -2,7 +2,7 @@ package by.academy;
 
 import java.io.Serializable;
 
-@ProduserInfo(name = "Zakupka", company = "RIK", prodyctTypes = { "Eda", "Voda" }, partNumber = 179)
+@ProduserInfo(name = "Zakupka", company = "Roga&Kopyta", prodyctTypes = { "Eda", "Voda" }, partNumber = 179)
 public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;

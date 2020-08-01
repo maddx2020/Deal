@@ -16,36 +16,37 @@ public class Main {
 
 //Для быстрого ввода(раскомментровать)		
 //		
-//		user1 = new User("Вова", "01-02-1900", "+375172233444", "tut@nikogo.net");
-//		user2 = new User("Васька", "29.02.2001", "+375334455666", "mozgov@tut.net");
+		user1 = new User("Вова", "01-02-1900", "+375172233444", "tut@nikogo.net");
+		user2 = new User("Васька", "29.02.2001", "+375334455666", "mozgov@tut.net");
 
-		User[] users = { user1, user2 };
-		for (User u : users) {
-			System.out.print("Введите имя участника сделки: ");
-			u.setName(scanner.nextLine());
-			System.out.print("Введите номер телефона: ");
-			line = scanner.nextLine();
-			while (phone.phoneValidate(line)) {
-				System.out.print("Неверный номер. Введите повторно: ");
-				line = scanner.nextLine();
-			}
-			u.setPhoneNumber(line);
-			System.out.print("Введите email адрес: ");
-			line = scanner.nextLine();
-			while (email.emailValidate(line)) {
-				System.out.print("Неверный адрес. Введите повторно: ");
-				line = scanner.nextLine();
-			}
-			u.setEmail(line);
-			System.out.print("Введите дату рождения: ");
-			line = scanner.nextLine();
-			while (birth.dateOfBirthday(line)) {
-				System.out.print("Неверная дата. Введите повторно: ");
-				line = scanner.nextLine();
-			}
-			u.setDateOfBirth(line);
-			System.out.println();
-		}
+//		User[] users = { user1, user2 };
+//		for (User u : users) {
+//			System.out.print("Введите имя участника сделки: ");
+//			u.setName(scanner.nextLine());
+//			System.out.print("Введите номер телефона: ");
+//			line = scanner.nextLine();
+//			while (phone.phoneValidate(line)) {
+//				System.out.print("Неверный номер. Введите повторно: ");
+//				line = scanner.nextLine();
+//			}
+//			u.setPhoneNumber(line);
+//			System.out.print("Введите email адрес: ");
+//			line = scanner.nextLine();
+//			while (email.emailValidate(line)) {
+//				System.out.print("Неверный адрес. Введите повторно: ");
+//				line = scanner.nextLine();
+//			}
+//			u.setEmail(line);
+//			System.out.print("Введите дату рождения: ");
+//			line = scanner.nextLine();
+//			while (birth.dateOfBirthday(line)) {
+//				System.out.print("Неверная дата. Введите повторно: ");
+//				line = scanner.nextLine();
+//			}
+//			u.setDateOfBirth(line);
+//			System.out.println();
+//		}
+		scanner.close();
 
 		Product prod1 = new Product("Хлеб", 1, 1.40);
 		Product prod2 = new Product("Молоко", 3, 2.11);
@@ -60,13 +61,11 @@ public class Main {
 		prodList.add(prod4);
 		prodList.add(prod5);
 
-
 		Deal deal = new Deal(user1, user2, prodList);
 
-		deal.productInfo();
+//		deal.productInfo();
 //		deal.zapros();
-
-		scanner.close();
+		deal.deal();
 	}
 
 }
