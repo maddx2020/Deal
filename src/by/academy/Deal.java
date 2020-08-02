@@ -1,8 +1,13 @@
 package by.academy;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Scanner;;
 
 public class Deal implements Serializable {
 
@@ -14,6 +19,7 @@ public class Deal implements Serializable {
 	private Date deadline;
 	final Date date = new Date();
 	final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+	final DecimalFormat df = new DecimalFormat(".##");
 	Scanner sc = new Scanner(System.in);
 
 	public Deal() {
@@ -99,10 +105,9 @@ public class Deal implements Serializable {
 		}
 			zapros();
 			break;
-		default: {
+		default:
 			System.out.println("\n\n" + toString());
 			break;
-		}
 		}
 	}
 
@@ -128,9 +133,9 @@ public class Deal implements Serializable {
 			System.out.println(i + 1 + ". " + prodList.get(i));
 		}
 
-		System.out.println("\nЦена за покупки: " + fullPrice() + "\n");
+		System.out.println("\nЦена за покупки: " + df.format(fullPrice()) + "\n");
 	}
-	
+
 	public void deal() {
 		productInfo();
 		zapros();
@@ -159,7 +164,7 @@ public class Deal implements Serializable {
 		builder.append("\n\nСтатус сделки: ");
 		builder.append(Status.Done.getStr() + "\n");
 		builder.append("Итоговая сумма к оплате: ");
-		builder.append(fullPrice());
+		builder.append(df.format(fullPrice()));
 		return builder.toString();
 	}
 
