@@ -14,7 +14,7 @@ public class User implements Serializable, Validator {
 	private Pattern p = Pattern.compile("^\\+375(17|25|29|33|44)\\d{7}$");
 	private Pattern p1 = Pattern.compile("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}");
 	private Pattern p2 = Pattern
-			.compile("([0]?[1-9]|[1|2][0-9]|[3]|[0|1])(\\.|/|-)([0]?[1-9]|1[0-2])(\\.|/|-)\\d{2,4}");
+			.compile("([0][1-9]|[1|2][0-9]|[3]|[0|1])(\\.|/|-)([0]?[1-9]|1[0-2])(\\.|/|-)\\d{2,4}");
 
 	public User() {
 		super();
